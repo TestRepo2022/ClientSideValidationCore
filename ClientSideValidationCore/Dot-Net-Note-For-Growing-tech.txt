@@ -1,0 +1,1538 @@
+.Net : .Net is the framework , which provide facitlity to build different-2 kind of application- like-
+	web app, desktop app, mobile app, games, web services, web api etc.
+	.net introduced in 2002 with .net 1.0 version. initillay it was named as New Generation 		Window application Services(NGWS), after  few year, it was renamed by microsoft as .Net.
+----------------------------------------------------------------
+Components of .Net:-
+
+1- CLR:- Comman Language Runtime: It is Heart of .Net Framework, it responsible to convert you code in to MSIL(Microsoft Intermediate Language) and then convert into machine code by JIT(Just in Time) compiler . CRL responsible to  run your code end-to-end.
+---------------------------------------------------------------------------------------------
+2- FCL(Framework Class Library):- .Net support  list of library, where each lib managed by FCL, and these Library exist in .DLL(Dynamic Link Library) from. when you need to use it, you need to add references in your project and import namespace and then can use.
+--------------------------------------------------------------------------------------------------
+3- CTS (Comman Type System):-  .Net Provide comman type system, which tells to convert everything in a comman format and then execute by main comipler.
+----------------------------------------------------------------------------------------------------------------------------
+How to Execute Code in .Net framework:-
+when user write the code in any language and compile it, it convert into MSIL, by its compiler.
+then msil code converted by JIT into machine code and then machine code executed by CPU.
+---------------------------------------------------------------------------------------------------------------------------
+
+C Sharp/ C#:-
+------------------
+1- What is c#, and how to use it.
+2- Concept  Object Oriented Programming
+3- Datatype, variables, operators
+4- typecasting and Boxing/Unboxing
+5- Control Flow Statement
+6- Array
+7- Function & string
+8- Object Oriented Programming(OOP)-
+		class, constructor, property, mehod, inheritance, polymarphism, abstraction, 		encapsulation, interface.
+9- Collection-
+	Non-generic collection
+	Generic collection
+10- Exception & Exception handling
+11- File & File Handling
+12- Partial class, extension method
+13- Event & Delegates
+14- Concept Async programming
+---------------------------------------------------------------------------------------
+
+Namespace:- namespace is the collection of classes, where each class wrapped in single namespace, it also represent a project. in c# namespace can create using namespace keyword.
+it is also same packege in java.
+
+class:- class is the logical blue print or collection of object, which wrap the data member and member function into single unit.
+
+method:- method is the function which represent actual behaviour in class. it is use to write business logic in program
+-----------------------------------------------------------------------------------------
+Namespace E_commerce
+{
+
+class Product{
+public string title="Mobile";
+public decimal price=12000;
+
+public void Create()
+{
+//do stuff
+}
+}
+
+class Customer
+{
+public string Name="Ajay"
+
+public void Register()
+{
+//do stuff
+}
+}
+} 
+------------------------------------------------------------
+Datatype-:-
+
+1- Value type-
+		value type create in main memory(RAM) , it occupy memory when program 		loaded and release when program unloaded.
+		it is 2 type.
+	a- Scalar Type:-
+			int, short, long, double, decimal,float, boolean, char.
+	b- Compound Type:-
+			Array, enum, struct etc.
+
+2 - Reference Type:-
+
+		class
+		string
+		db resource
+		file resources
+		external resources
+---------------------------------------------------------------------------------
+Operator:- 
+	1- Arithmatic operator:- +,-,/,*,%
+	2- relational operator: >, < , >=, <=, ==, !=
+	3- Logical Operator:  &&, ||, !
+	4- Assignment operator:  =
+	5- Increment Operator: ++, --
+	6- Conditional operator/ternary operator:  condition?expr1:expr2
+	7- concatenation operator: +
+	8- Lambda Operator:  =>
+-------------------------------------------
+
+Variable:- 
+	syntax:
+		datatype var_name=value;
+		string student_name="Aditya";
+		int rollnumber=101;  
+--------------------------------------------------------------
+implicit type variable:-
+		var x=10;      //int
+		var y="hi"  ;   //string
+		var z=true;   //boolean
+--------------------------------------------------------------
+Control Flow Statements:-
+			control flow statement allow you to control your code execution as 			per condition. also can repeat code number of time,as per 						requirement. these are following.
+	1- decision making statement:
+	2- Switch case
+	3- Loop statement
+
+1- Decision making statement:- 
+		decision making statement allow you to control your code as per condition.
+	exa: if, if else, elseif, nested if.
+
+syntax:-	
+	if(condition)
+	{
+	statements here//
+	}
+-----------------
+if else:-
+	if(condition)
+	{
+	//statements
+	}
+	else
+	{
+	//statements;
+	}
+---------------------
+else if:-
+
+	if(condition)
+	{
+	//statements
+	}
+	else if(condition)
+	{
+	//statements;
+	}
+	else{
+	//statements;
+	}
+----------------------
+nested if:-
+	if(condition)
+	{
+	if(condition)
+	{
+	//statements;
+	}
+	}
+---------------------------------------------------
+Example:-
+	1- w.a.p. to enter age of person and check if age is >18 then he is eligible for vote.- done
+	2- w.a.p. to enter the number and check the number is even or odd- assesment
+	3- w.a.p. to enter 3 number and print largest number.- done
+	4- w.a.p. to enter amount and calculate discount based on amount. - assesment
+		like if amount >=10000 then discount will be 25%
+		if amount>=5000 then discount will be 15%
+		if amount>=2000 then discount will be 10%
+		else discount will be 2%.
+	
+	5- w.a.p. to enter marks of five subject and calculate following.         --assesment
+		total marks
+		average mark
+		percentage
+		grade- where grade will be based of 10+2 term and condition
+	6- w.a.p. to enter electricity consumed unit and calculate total bill, based unit.    -assesment
+		if unit>=1000 then per unit charge will be 5Rs.
+		if unit>=500 then per unit charge 4.5 rs.
+		if unit>=200 then per unit charge 3Rs
+		else per unit chagre 0rs , but need to pay fix charge 199.
+		also add 599Rs loading charge if unit >=1500.
+		--------------------------Output------------------------
+		Enter Unit ? 2000
+		-----------------------------------------------------------
+		Total Unit = 2000
+		Unit Charge= 10000
+		Loading Charge=599
+		Fix Charge=  199
+		----------------------------
+		Total Bill:  10798 Rs.
+	7-  w.a.p. to get system time, and print message.                            - done
+		if time between 4am to 12pm then-   good morning
+		if time between 12pm to 4pm then Good AfterNoon
+		if time between 4pm - 8pm then Good evening
+		if time 8pm to 4am then good night.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Switch Case:- switch case is very similar to if else, but we can't put condition in it, like if.
+	        it match the given case and execute it. it work faster than if , that's why it recomanded.
+	
+	syntax:
+		switch(variable)
+		{
+		case 1:
+		statements;
+		break;
+
+		case 2:
+		statements;
+		break;
+
+		case n:
+		statements;
+		break;
+
+		default:
+		statements;
+		break;
+
+		}
+---------------------------------------------------------------------------------
+Example & Assesment:-
+	1-w.a.p. to enter any number and check the number is even or odd, using switch case.
+	2- w.a.p. to enter day code 0-6 and print day name.
+		like- 0=> Sunday, 1=> Monday  etc.
+	3- w.a.p. to get system day and print offer-
+			as per day, each day has different offer.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Loop:- Loop is the technique to repeat the statements , number of time, to the given condition.
+              there is different type of loop supported by c#.
+	
+	exa:
+		while
+		do while
+		for
+		foreach
+-------------------------------------------------------
+1- while: while is the pre-tested loop, which check the condition first and then execute statements.
+	syntax:
+		initialization
+	while(condition)
+		{
+		statements;
+		inc/dec;
+		}
+---------------------------------------------------------------
+Example:-
+	1- w.a.p. to enter any number and find out all the number divisible by given number.- ok
+	2- w.a.p. to enter any number and print table of it.
+	3- w.a.p to enter any number and print factorial of it.
+	4- w.a.p. to enter any number and check the number is prime or not.
+	5- w.a.p. to enter any number and check the number is pelindrom or not. ok
+-------------------------------------------------------------------------------------------------------------------
+2- do while: it is post-tested loop , which execute statement first then check condition. so it must execute atleast once.
+		syntax:
+			do
+			{
+			statements;
+			inc/dec;
+			}
+			while(condition);
+
+----------------------------------------------------------------------------------------------------------
+3- for loop: it is very similar while loop, but it pass all statement in one line.
+	
+	syntax:
+		for(initialization; condition; inc/dec)
+		{
+		statements;
+		}
+-----------------------------------------------------------------------------------------------------------
+Example:- 
+	w.a.p. to enter 2 number and find out all the prime numbers between given number.
+
+Assesment:-
+
+w.a.p. to print following patterns.
+
+1- 
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+----------------------
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+--------------------------------
+5 4 3 2 1
+5 4 3 2
+5 4 3
+5 4
+5
+-------------------------------------
+                               *
+                          *  *  *
+                     *  *  *  *  *
+                *  *  *  *  *  *  *
+----------------------------------
+* * * * * * *
+* * * * *
+* * *
+*
+* * *
+* * * * *
+* * * * * * *
+-------------------------------------------
+Array:- Array is the collection of homogenous datatype, where we can store n number of similar type items in a queue, where each item stored on particular index position and index start from 0.
+
+advantage of array:-
+1- array reduce program complexity.
+2- array enhance data retrive performance.
+3- array allocate memory in sequential manner.
+4- array easy to use.
+
+Disadvantage:-
+1- array is bound with size.
+2- array is bound with type.
+----------------------------------------------------------------------------------------
+array declaration:-
+syntax:
+
+	datatype []arrayName;
+
+	array initialization//
+	arrayName=new datatype[size];
+
+	store item in array//
+	arrayName[index]=value;
+
+	//read item from array
+	var varName=arrayName[index];
+
+--------------------------------------------------------------------------
+Array type- there are several type of array.
+1- one dimension array
+2- two dimension  array
+3- jagged array
+----------------------------------------------------------------
+
+
+            //string[] students= new string[5];
+
+            //students[0] = "deepak";
+            //students[1] = "rahul";
+            //students[2] = "vinit";
+            //students[3] = "rhoit";
+            //students[4] = "pawan";
+
+
+            ////for (int i = students.Length-1; i >=0; i--)
+            ////    Console.WriteLine("Name: " + students[i]);
+
+            //foreach (string name in students)
+            //{
+            //    Console.WriteLine("Student Name = " + name);
+            //}
+
+            /*
+            string[] students;
+
+            Console.WriteLine("Enter size of array ?");
+            int ss = Int32.Parse(Console.ReadLine());
+            students = new string[ss];
+
+            //enter items
+            for(int i=0; i<students.Length; i++)
+            {
+                Console.WriteLine("Enter student name in {0} index",i);
+                string name = Console.ReadLine();
+                students[i] = name;
+            }
+
+            //print names
+            Console.WriteLine("--------all students----------------");
+            foreach (string name in students)
+            {
+                Console.WriteLine("Student Name = " + name);
+            }
+            */
+            /*
+            int[,] matrix = new int[3, 7];
+            matrix[0, 0] = 10;
+            matrix[0, 1] = 60;
+            matrix[0, 2] = 80;
+            //matrix[0, 3] = 20;
+            matrix[1, 0] = 30;
+            //matrix[1, 1] = 12;
+            matrix[1, 2] = 44;
+            matrix[1, 3] = 65;
+            matrix[1, 4] = 65;
+            matrix[1, 5] = 65;
+            matrix[1, 6] = 65;
+            //matrix[2, 0] = 76;
+            matrix[2, 1] = 23;
+            matrix[2, 2] = 43;
+            //matrix[2, 3] = 23;
+            Console.WriteLine("-------------matrix-----------------");
+            for(int i=0; i<3; i++)
+            {
+                for(int j=0; j<7; j++)
+                {
+                    Console.Write(matrix[i,j]+" ");
+                }
+                Console.WriteLine();
+            }
+            */
+
+            //jagged array
+
+            int[][] nums = new int[4][];
+            nums[0] =new int[3];
+            nums[1] =new int[5];
+            nums[2] =new int[2];
+            nums[3] =new int[4];
+
+            nums[0][0] = 10;
+            nums[0][1] = 20;
+            nums[0][2] = 30;
+
+            nums[1][0] = 11;
+            nums[1][1] = 12;
+            nums[1][2] = 13;
+            nums[1][3] = 14;
+            nums[1][4] = 15;
+
+            nums[2][0] = 22;
+            nums[2][1] = 23;
+
+            nums[3][0] = 24;
+            nums[3][1] = 32;
+            nums[3][2] = 54;
+            nums[3][3] = 65;
+            Console.WriteLine("---------------array-----------------");
+            foreach(var arr in nums)
+            {
+                foreach(var n in arr)
+                {
+                    Console.Write(n+" ");
+                }
+                Console.WriteLine();
+            }
+
+--------------------------------------------------------------------------------
+Assignment:-
+
+1- w.a.p. to create a array and store 10 number and find smallest and largest.         ----done
+2- w.a.p. to enter 5 number in array and print each number in reverse order.
+3- w.a.p. to create 2 array and find following.                        ---done
+	a- find comman elements
+	b- find all elements of first array which are not in second array.
+	c- find all uncomman elements.
+4- w.a.p. enter any name and find  ascii value of each character, and generate a string by adding 5 in each ascii value.                   ----done
+
+5- w.a.p. to create array of 10 number and print check if number is prime then print factorial of it , else generate fibnucci series to then number terms.
+
+6- w.a.p enter a string and find occurance of each character.
+-------------------------------------------------------------------------------------------------------------------------
+Function:- function is the set of intructions written in sequential manner to perform specific task.
+	in C# function can divided in to 2 type.
+	1- Pre-define/library function
+	2- user define function.
+----------------------------------------------------------------------------------
+1- Pre-define function:- these are the ready made function, we need to import namespace and  can use the them. these are following type.
+1- string function
+2- math function
+3- character handling function
+4- datetime function
+-------------------------------------------------------------------
+1- String :- string is the  collection of characters, which are immutable, string stored in memory as per index-wise.  to manipulate string c# provide 2 type function.
+	1- string function
+	2- stringbuilder function
+
+string str="your string";
+
+string function-
+	string has following methods-
+	1- substring
+	2- startsWith & endsWith
+	3- indexOf & LastIndexOf
+	4- trim
+	5- Split
+	6- contains
+	7- remove
+	8- replace
+	9- toupper & tolower
+	-------------------------------------------
+Assignment:-
+
+1- w.a.p. to enter any string and print it in reverse order.
+2- w.a.p. to enter email address and print seprate username  and domain.
+	exa:
+		input: deepak122@gmail.com
+		output:
+			username=deepak122
+			domain= gmail.com
+3- w.a.p. to enter mobile number and print it in following format.
+	example: 
+		input: 9988773982
+		output XXXXXX982
+4- w.a.p. to enter any name and print it in abbrivated form.
+	exa:
+		input: raj kumar rao
+		output: 
+			R.K. Rao
+5- w.a.p. to count specific word from string.
+
+6- w.a.p. to store a string and remove all special characters from string.
+--------------------------------------------------------------------------------------------------------------
+StringBuilder:  stringbuilder is the mutable string, which store string in object form  and we can modify this string and then convert into literals.
+this string exist in System.Text; namespace.
+--------------------
+code.............
+
+
+            //string message = "this is important message !"; 
+            //Console.WriteLine(message.Substring(8));
+            //Console.WriteLine(message.Substring(8,9));
+
+            //string url = "https://www.google.com";
+
+            //if(url.StartsWith("https://") && url.EndsWith(".com"))
+            //{
+            //    Console.WriteLine("Valid url");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid Url");
+            //}
+
+            //string str = "  welcome   ";
+            ////Console.WriteLine(str.IndexOf('e'));
+            ////Console.WriteLine(str.LastIndexOf('e'));
+            //Console.WriteLine(str.Length);
+            //Console.WriteLine(str.Trim().Length);
+            //Console.WriteLine(str.TrimStart().Length);
+            //Console.WriteLine(str.TrimEnd().Length);
+
+            //  string message = "this is important message !";
+            //string[] Arr = message.Split(' ');
+            //char[] Arr = message.ToCharArray();
+
+            //for(int i=0; i<Arr.Length; i++)
+            //{
+            //    Console.WriteLine("index: "+i+", value: "+Arr[i]);
+            //}
+
+            //Console.WriteLine(message.Contains("are"));
+
+            //string str = message.Remove(8, 9);
+            //Console.WriteLine(message);
+            //Console.WriteLine(str);
+
+            //string msg = message.Replace(" is", " are");
+            //Console.WriteLine(message);
+            //Console.WriteLine(msg);
+
+            // Console.WriteLine(message.ToUpper());
+            // Console.WriteLine(message.ToLower());
+
+            //string message = "this is@ important $ #message !";
+            ////tHIS iS  iMPORTANT mESSAGE !
+            //var arr = message.Split(' ');
+
+            //string result = "";
+            //foreach(string str in arr)
+            //{
+            //    result += str.Substring(0,1)+str.ToUpper().Remove(0,1)+" ";
+            //}
+            //Console.WriteLine(result);
+
+            StringBuilder builder = new StringBuilder("this is changeable string");
+            // builder.Insert(4, " string");
+            //builder.Remove(5, 2);
+            //  builder.Append(" new word");
+            builder.Replace("is", "are");
+            Console.WriteLine(builder);
+
+-----------------------------------------------------------------------------------------------------------
+
+            StringBuilder sb = new StringBuilder("This is .net training");
+
+            sb.Append(" classes");
+            sb.Insert(13, "core ");
+            sb.Remove(2, 3);           
+            Console.WriteLine(sb);
+
+------------------------------------------------------------------------------------------------------------
+IMP-Q:- Difference between string and stringbuilder ?
+-----------------------------------------------------------------------------------------------------------
+Math Function:- A math function can be use to perform mathmatical operations.
+                                these functions exist in Math class.
+
+	Exa:
+		pow
+		abs
+		ciel
+		floor
+		log
+		sqrt
+		divrem
+-------------------------------------------------------------
+Character handling function: usefull to handle chars value, these function exist in Char class.
+			Exa:
+				IsLetter
+				IsDigit
+				IsNumber
+				IsLower
+				IsUpper
+				IsPanctuation
+				IsWhiteSpace
+				---------------------------------------
+
+Example:-
+
+//--------------------------------Math-----------------------------------//
+
+            /*
+            Console.WriteLine(Math.Pow(5,6));
+            Console.WriteLine(Math.Abs(-12.5));
+            Console.WriteLine(Math.Sqrt(5));
+            Console.WriteLine(Math.Ceiling(10.8));
+            Console.WriteLine(Math.Floor(10.8));
+            int r;
+            Console.WriteLine(Math.DivRem(10,8,out r));
+            Console.WriteLine(r);
+            */
+
+            // Console.WriteLine(Math.Round(10.4));
+
+            /*
+            string cp_string = "ABCnopqrsDE345678FGHIJSTUVWXY3456789ZabcdefghijklmtKLMNOPQRuvwxyz012";
+            string captcha = string.Empty;
+            Random rd = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                int r = rd.Next(0, 51);
+                captcha += cp_string[r];
+            }
+            Console.WriteLine("Your Captcha: "+ captcha);
+            */
+
+            //---------------------Character handling function--------------------------//
+            /*
+            char myc = '4';
+
+            Console.WriteLine(Char.IsLetter(myc));
+            Console.WriteLine(Char.IsUpper(myc));
+            Console.WriteLine(Char.IsLower(myc));
+            Console.WriteLine(Char.IsNumber(myc));
+            Console.WriteLine(Char.IsPunctuation(myc));
+            Console.WriteLine(Char.IsWhiteSpace(myc));
+
+            */
+
+            //---------------------DateTime function----------------------------//
+
+            // var today = DateTime.Now;
+
+            //Console.WriteLine("Datetime: "+today);
+            /*
+            Console.WriteLine("Year: " + today.Year);
+            Console.WriteLine("Month: " + today.Month);
+            Console.WriteLine("Day: " + today.Day);
+            Console.WriteLine("DayOfWeek: " + today.DayOfWeek);
+            Console.WriteLine("Hour: " + today.Hour);
+            Console.WriteLine("Minute: " + today.Minute);
+            Console.WriteLine("Second: " + today.Second);
+            Console.WriteLine("Millisecond: " + today.Millisecond);
+            */
+           // Console.WriteLine("Next Date: "+today.AddMonths(50));
+
+--------------------------------------------------------------------------------------------------------------------------
+User define function:-  user define function, can be create as per our requirement. it can be use for code-reusability purpose. 
+
+syntax:
+
+access_modifier  return_type functionName(arguments)
+{
+//function body
+<return value>
+}
+--------------------------------------------------------------------------------------------
+Access modifier: it represent your function scope.
+		public
+		private
+		protected
+		internal
+Note:- i we do not use any modifier, system will assign private by default.
+-------------------------------------------------------------------------------------------------
+Return type:- it will decide , which type value return by function.
+	    exa: string, int,bool, double, decimal etc.
+	
+Note: if function will do not return any value , we can use void type.
+Note:- if we used return type, it must return any value , with return keyword.
+--------------------------------------------------------------------------------------------------
+
+funtion Name:- function name can be anything, but relevent to your task.
+	           also function name should be capitalize.
+--------------------------------------------------------------------------------------------------
+Arguments:-  arguments are the input of function, which taken from end user and procced for further.
+------------------------------------------------------------------------------------------------
+Type of function:-  there is several type of function.
+
+1- simple function
+2- function with callby value and callby reference
+3- function with out keyword
+4- function with param keyword.
+---------------------------------------------------------------------------------------------------
+Object Orinted Programming (OOP):-
+oop is the methodology by which we can solve any large and complex problem by dividing in to smaller units. (divide and conquer method.).
+
+now a days many programming langage support oops concept , and based on this concept develop application.
+
+Feature of oops:. 
+Class
+object
+inheritance
+polymarphism
+abstraction
+encapsulation
+interface.
+
+advantage of oops:
+
+1- security
+2- robustness
+3- reduce complexity
+4- less time consuming
+5- code reusablity
+6- provide a perfect structure
+
+disadvantage:  implementation is littile bit difficult.
+
+class : class is the blue print or logical view that wrap the data memeber in the single unit.
+it is also called group of objects.
+
+advantage of using class: it increase program modularity.
+
+class class_name
+{
+// data member
+member function//
+}
+
+Member of class :
+1- constructor
+2- property
+3- methods
+4-indexer
+------------------------------------ 
+1- constructor
+  what is constructor: it is special member of class. which automatically called , when the class instantiated.
+
+  use of constructor  : it is automatic value initializer.
+it is use to allocate memory for comman member of the class automatically, when object created of the class.
+ 
+  work of constructor : it works as memory allocator which reserve memory for class member.
+
+note: 
+1- constructor have no return type.
+2- constructor naver be inherited.
+3- it alwayes be same name of the class name.
+
+type of constuctor: 
+1- default constructor
+2- user define constructor.
+1- default constructor: it automatically called by compiler.
+if we have not define any constructor. means when object created of the class it automatically called a constructor for memory allocation.
+
+2- user define constructor: it define by developer.
+it have some types:
+a- constructor have no paramter
+b- parameterized constructor
+c- private constructor
+d- copy constructor
+e- static constructor
+
+2- destructor
+3- variable
+4- method
+5- property
+7- static member.
+
+c- Private Constructor:- A constructor created with Private Keyword, it is accessible only from within class.  a private constructor also usefull to restrict class object creation.
+
+ private Employees()
+        {
+            Console.WriteLine("I am private constructor !");
+        }
+----------------------------------------------------------------------------------------------------------------
+e- Static Constructor:- A constructor created with Static keyword, is called static constructor.
+a static  constructor accessible with static member either property or method.
+
+Note: - a static constructor must be parameter-less. 
+
+ public static string data = "this is static data";
+        static Employees()
+        {
+            Console.WriteLine("I am static constructor !");
+        }
+------------------------------------------------------------------------------------------------------------------
+Destructor:-  c# has automatic garbage collector, which release object memory, when it uses is 0.
+	     but in case if you want to release memory manually as per requirement, we can use destructor.
+syntax:
+	~classname(){}
+-----------------------------------------------------------------------------------------------------------------
+
+destructor: it is use to destroy the allocated memory which allocated by constructor.
+
+~destruct();
+
+
+Ques: what is difference between method and constructor ?
+
+1- method has return type , but constructor has no return type.
+2- method may or may not return any value , while constructor never return any value.
+ 3- methods has different name of class, while constructor must be same name of class.
+4- method can be use to perform business logic of class, while constructor can be use to intialize comman member of class.
+5- Method invoke manually, which constructor invoke automatic.
+------------------------------------------------------------------------------------------
+property:- property can be use to set or get the values. 
+exa:
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp5
+{
+    class BankingCustomer
+    {
+        public string ACNO { get; }
+        public string Name{get;set;};
+        private decimal _Amount;
+        public string Address { get; set; }
+        public BankingCustomer(string AcNo, string Name,decimal Amount)
+        {
+            this.ACNO = AcNo;
+            this.Name = Name;
+            this._Amount = Amount;
+        }
+        public decimal Amount
+        {
+            get { return this._Amount; }
+            set
+            {
+                if (value > 1000)
+                    this._Amount = value;
+
+            }
+        }
+    }
+}
+
+------------------------------------------------------- 
+  static void Main(string[] args)
+        {
+
+            BankingCustomer banking = new BankingCustomer( AcNo:"SBI00911", Name: "Deepak", 12000);
+            Console.WriteLine("----------Customer Info-------");
+            Console.WriteLine("Customer Account No: {0}",banking.ACNO);
+            Console.WriteLine("Customer Name: {0}",banking.Name);
+            Console.WriteLine("Customer Amount: {0}",banking.Amount);
+
+           // banking.ACNO = "sfe";
+            banking.Amount -= 5000;
+
+            Console.WriteLine("----------Customer Info after changes-------");
+            Console.WriteLine("Customer Account No: {0}", banking.ACNO);
+            Console.WriteLine("Customer Name: {0}", banking.Name);
+            Console.WriteLine("Customer Amount: {0}", banking.Amount);
+
+
+
+            Console.Read();
+        }
+---------------------------------------------------------------------------------------------
+
+Variable Scope: 
+local var
+global var/instance var
+static variable
+-------------------------------------------
+static keyword: this keyword refere to statically allocate memory without need of creating object.
+we can create static variable or static method.
+
+Note:-
+	1- A static function can not use non-static variable & function.
+	2- A static class can't have non-static member.
+	3- A non-static class Or method can access static member.
+
+----------------------------------------------------------------------------------
+Inheritance:-  inheritance is a way to code -reusability, where a parent class and child class, we can use barent class property in child class. 
+to achieve inheritance we use : sign.
+
+-- base-> drived
+-- Parent-> Child
+-- Super-> Sub
+---------------------------------------
+
+exa:
+
+class A{  }
+class B:A{}
+--------------------------------------------
+Type of Inheritance:- there is several type of inheritance.
+1- Single Level
+2- Multi-Level
+3- Hirarchical
+4- Hybrid
+5- Multiple
+-------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------
+Assesment: lets we have employee class, there is 2 type employee, like- fulltime and parttime.
+create a comman class for both class property and methods, and inheirt that class in both class.
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+base keyword:-  A base keyword is use to call base class members from drived class. 
+sealed keyword:- sealed keyword is use to protect the class from inheritance, it means a sealed class can't be inherit.
+----------------------------------------------------
+
+Polymarphism: poly+marphism=> poly=many, marph=forms,
+
+ploymarphism provide facility to make mutiple method/function with same name and access in easy way.
+
+it is two types: 
+1- complie time polymarphism-> it is also called overloading or early binding.
+
+2- run time polymarphism: it is also called overriding or late binding.
+
+overloading: this type of polymarphism can be achevie inside a single class where a function with multiple definition but with same name, it can be differenciate with type of parameter or number of parameter.
+
+
+overriding: this type of polymarphism can be achevie in case on inheritance. where parent class method modified by child class method. means a function within two class with same name and parameter but the definition are different.
+so, if we call same function it first load parent class function but at runtime it will overrided by child class finction, so it is called runtime polymarphism or late binding.
+
+note: if we want a class which can't inherit by any class then we can create it final class by final keyword.
+it is same as c# sealed, java final, keyword.
+-----------------------------------------------------------------------------------------------------------
+
+Interview Question:- Difference between overloading and overriding ?
+
+1- overloading is the compile time polymarphism, while overriding is the run time polymarphism.
+2- overloading done within class, while overriding done between two class(base and drived)
+3- overloding has different signature with same method name, while overriding have same signature and same method name.
+4- overloading is the technique to create method versions, while overriding is the technique to modify base class methods definition.
+5- overloading is the early binding , while overriding is the late binding.
+6- overloading do not use any addition keyword, while overriding use new, virtual and override keyword.
+-----------------------------------------------------------------------------------------------------------
+
+Encapsulation:-
+Abstraction:-
+Interface:-
+-----------------------------------------------------------------------------------------------------------
+ Encapsulation:- encapsulation is the technique to hide the un-essential information from end user.  this technique helpfull to achieve data security. 
+encapsulation can  achieve by using access modifier,  these are following.
+1- public- can accessible anywhere.
+2- private- can accessible within class.
+3- protected- can accessible in current class and drived/child class
+4- internal- can access within namespace only.
+5- internal protected- can access within namespace and in case of inheirtance.
+
+--------------------------------------------------------------
+Abstraction:- abstraction is the technique to show essential information to end user. 
+		a abstraction can achieve by using abstract class..
+	where a  abstract class is the partially implemented class, where some methods are 	abstract and some are non-abstract.
+	Note:-
+1- A class can create abstract by using abstract keyword.
+2- A method can create abstract by abstract keyword.
+3- a abstract method by default virtual.
+4- a abstract method can't have body.
+5- a abstract class must be parent class
+6- a abstract class can't instatiate.
+----------------------------------------------------------------
+Interface: interface is the pure abstract class, which have only declaration, there is no data or body of methods.  a interface can create by using interface keyword.
+
+
+Note:- 
+1- interface can't instantiate.
+2- interface must contains all abstract method.
+3- interface all members by default public.
+4- interface can't have constructor.
+5- interface all methods by default public and abstract.
+6- interface is the new implementation of class.
+-------------------------------------------------------------------------
+Class UserAccount{
+
+public void SignUp(){
+//some body here
+GenerateOTP();
+SendMail();
+
+}
+
+public void SignIn()
+{
+//some body
+}
+
+public void SendMail()
+{
+
+}
+public void GenerateOTP()
+{
+
+}
+
+}
+
+----------------------------------------------------------------
+Collections:-
+	collections are the ready made classes, which are helpfull to read and write the data in form of list, like array, but array has some disadvantages , while collection resolve all the array disadvantages.
+                          these are 2 type.
+	1- Non-generic collection
+	2- Generic collection
+----------------------------------------------------------------
+1- Non-generic collection: Non-generic collection is non-type safe, which has store each item in form of object. where you need to unboxing while it use.
+all the non-generic classes exist in system.collections; namespace.
+ there is five major classes.
+1- ArrayList
+2- Stack
+3- Queue
+4- HashTable
+5- SortedList
+---------------------------------------------------------------
+2- Generic collection:- Generic collection is the type-safe collection, which can store item in specific type only. so it do not need to cast the values when we use it.
+	all the generic collection classes exist in system.collections.generic ; namespace.
+--------------------Exa:---
+		List
+		Stack
+		Queue
+		SortedList
+		Dictionary
+----------------------------------------------------------------------------------------
+Note: Generic represted by:   <T>
+-----------------------------------------------------------------------------------------
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //ArrayList list = new ArrayList();
+            //list.Add("Rakesh");
+            //list.Add(4000);
+            //list.Add(true);
+            //list.Add(55.77);
+
+            //string[] stu = { "php", "asp", "python" };
+            //list.AddRange(stu);
+
+            // list.Remove(4000);
+            //list.RemoveAt(1);
+            // list.RemoveRange(1, 2);
+
+
+            //list.Reverse();
+
+            //------------print list--------------------//
+
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine("Item : "+item);
+            //}
+            //-----------------seach item------------------//
+
+            // int index=list.BinarySearch(4000);
+            // Console.WriteLine("\nItem found at: {0} index",index);
+
+            //int index = list.IndexOf("asp");
+            //Console.WriteLine("\nItem found at: {0} index",index);
+
+            /*
+            if (list.Contains("python"))
+            {
+                Console.WriteLine("Yes C#Exist");
+            }
+            else
+            {
+                Console.WriteLine("No C#Not Exist");
+            }
+            */
+
+            /*
+            list.Insert(list.IndexOf("php")+1, "Core .net");
+            Console.WriteLine("-------------After insert-------------------");
+            foreach (var item in list)
+            {
+                Console.WriteLine("Item : " + item);
+            }
+            */
+
+            //-----------------Stack------------------------------------//
+            /*
+            Stack stk = new Stack();
+            stk.Push("Asp");
+            stk.Push("html");
+            stk.Push("css");
+            stk.Push("jsp");
+            stk.Push("javascript");
+
+            foreach (var item in stk)
+            {
+                Console.WriteLine("Item : " + item);
+            }
+            */
+            //----------------remove/POP item--------------------//
+            /*
+             stk.Pop();
+
+             Console.WriteLine("\n--------------After remove-----------------");
+             foreach (var item in stk)
+             {
+                 Console.WriteLine("Item : " + item);
+             }
+            */
+
+            // Console.WriteLine("Pick Item: "+stk.Peek());
+            /*
+            string[] array = new string[10];
+            stk.CopyTo(array, 0);
+
+
+            Console.WriteLine("\n--------------After copy-----------------");
+            foreach (var item in array)
+            {
+                Console.WriteLine("Item : " + item);
+            }
+            */
+
+            //---------------------Queue---------------------//
+            /*
+            Queue lst = new Queue();
+
+            lst.Enqueue(100);
+            lst.Enqueue(40);
+            lst.Enqueue(700);
+            lst.Enqueue(800);
+
+            lst.Dequeue();  //remove item in FIFO 
+            foreach (var item in lst)
+            {
+                Console.WriteLine("Item : " + item);
+            }
+
+            */
+
+            /*
+            Hashtable ht = new Hashtable();
+            ht.Add("Ram", "98238293892");
+            ht.Add("Ajay", "8838322233");
+            ht.Add("Pawan", "77238293892");
+            ht.Add("Amit", "67838293892");
+
+            //ht.Remove("Pawan");
+            //ht.Clear();
+            foreach (DictionaryEntry item in ht)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}" , item.Key, item.Value);
+            }
+            */
+
+            /*
+            SortedList ht = new SortedList();
+            ht.Add("Ram", "98238293892");
+            ht.Add("Ajay", "8838322233");
+            ht.Add("Pawan", "77238293892");
+            ht.Add("Amit", "67838293892");
+
+            //ht.Remove("Pawan");
+            //ht.Clear();
+            foreach (DictionaryEntry item in ht)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+            }
+            */
+
+            /*
+            ArrayList lst = new ArrayList() {11,33,54,"32b","w",32,45,66 };
+            foreach (int n in lst) 
+            {
+                int r = n * n * n;
+                Console.WriteLine("Qube: "+r);
+            }
+            */
+
+            List<string> list = new List<string>();
+
+            list.Add("Php");
+            list.Add("asp");
+            list.Add("jsp");
+
+
+            List<int> list2 = new List<int>();
+
+            list2.Add(100);
+            list2.Add(300);
+            list2.Add(500);
+
+
+            Queue<double> qq = new Queue<double>();
+            qq.Enqueue(222);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------
+Exception & Exception Handling:
+Exception:- Exception is the run-time error, which occurs during program execution.
+	 it abort the abonormal execution of flow. there is lots of c# classes , which are 	responsible to throw the exception.
+	Exa:
+		FormatException
+		OverFlowException
+		NullValueReference
+		OutofRange Exception
+		DividebyZeroException
+---------------------------------------------------------------
+C# also provide technique to handle these exception.
+	Exa:
+		try
+		{
+		//your code here
+		}		
+		catch(handler_class obj)
+		{
+		//your handler code
+		}
+---------------------------------------------------------------------------------
+Note: All the Exception classes inherits a base class, Exception, so each Exception raised by this parenet class, also can handle by this parent class.
+---------------------------------------------------------------------
+finally:- Finally block ensure code execution, it means it provide gaurantee of code execution. either exception raise or not.
+--------------------------------------------------------------------------------
+C# also provide throw keyword the raise your own exception.
+----------------------------------------------------------------------------------------
+Exa:-
+
+            try
+            {
+                Console.WriteLine("Enter first number ?");
+                int n1 = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter second number ?");
+                int n2 = Int32.Parse(Console.ReadLine());
+
+                if (n1 < n2)
+                    throw new DivideSmallerValueException();
+
+                int r = n1 / n2;
+
+                Console.WriteLine("Your Result is: " + r);
+            }
+            catch(Exception fe)
+            {
+                Console.WriteLine(fe.Message);
+            }
+            finally
+            {
+                Console.WriteLine("I will execute  gaurantee !");
+            }
+
+File Handling:-  File handling is the technique to create/read/write/append files and directory.
+	          all the file handling related classes exist in System.IO; namespace.
+-------------------------
+Exa:
+1- Getting Drive Information.
+
+  DriveInfo []drives = DriveInfo.GetDrives();
+
+                Console.WriteLine("------------All Drive InFo----------------------");
+                foreach(var drive in drives)
+                {
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("Drive Name: "+drive.Name);
+                    Console.WriteLine("Drive Type: "+drive.DriveType);
+                    Console.WriteLine("Drive Total Size: "+(((drive.TotalSize)/1024)/1024)/1024+" GB");
+                    Console.WriteLine("Drive Free Size: "+ (((drive.TotalFreeSpace) / 1024) / 1024) / 1024+" GB");
+
+                }
+------------------------------------------------------------------------------------------------------
+Getting Direcotry Info:-----------------
+
+ string path = @"D:\\training\notes";
+                DirectoryInfo directory = new DirectoryInfo(path);
+
+                Console.WriteLine("------------All Folder InFo----------------------");
+                foreach(var d in directory.GetDirectories())
+                {
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("Folder Name: "+d.Name);
+                    Console.WriteLine("Folder Full Name: "+d.FullName);
+                    Console.WriteLine("Folder Created On: "+d.CreationTime);
+
+                }
+-----------------------------------------------------------
+Getting File Info:-
+
+   string path = @"D:\\training\notes";
+                DirectoryInfo directory = new DirectoryInfo(path);
+
+                Console.WriteLine("------------All Files InFo----------------------");
+                foreach(var d in directory.GetFiles())
+                {
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("Files Name: " + d.Name);
+                    Console.WriteLine("Files Full Name: " + d.FullName);
+                    Console.WriteLine("Files Created On: " + d.CreationTime);
+
+                }
+-----------------------------------------------------------
+Creating Directory & Files:-
+
+
+  string path = @"D:\\training\notes";
+
+                Console.WriteLine("Enter Folder Name ?");
+                string fname = Console.ReadLine();
+
+                string fPath = Path.Combine(path, fname);
+                if (!Directory.Exists(fPath))
+                {
+                    Directory.CreateDirectory(fPath);
+                    Console.WriteLine("Your Directory created !");
+                }
+                else
+                {
+                    Console.WriteLine("Directory already exist !");
+                }
+-------------------------------------------------------------------------
+
+  string path = @"D:\\training\notes";
+
+                Console.WriteLine("Enter Folder Name ?");
+                string fname = Console.ReadLine();
+
+                string fPath = Path.Combine(path, fname);
+                if (Directory.Exists(fPath))
+                {
+                    Directory.Delete(fPath);
+                    Console.WriteLine("Your Directory deleted !");
+                }
+                else
+                {
+                    Console.WriteLine("Directory not exist !");
+                }
+------------------------------------------------------------------------------------
+ string path = @"D:\\training\notes";
+
+                Console.WriteLine("Enter File Name ?");
+                string fname = Console.ReadLine();
+
+                string fPath = Path.Combine(path, fname+".txt");
+                if (File.Exists(fPath))
+                {
+                    File.Delete(fPath);
+                    Console.WriteLine("Your file deleted!");
+                }
+                else
+                {
+                    Console.WriteLine("File not exist!");
+                }
+-------------------------------------------------------------------------------------
+Assignmenet:-
+
+1-Write a C# program to append text to a file and display the text.
+2-Write a C# program to read last n lines of a file
+3-Write a C# program to read a file line by line and store it into a list
+4-Write a C# program to find the longest words.
+5-Write a C# program to count the number of lines in a text file.
+6-Write a C# program to count the frequency of words in a file
+7-Write a C# program to copy the contents of a file to another file 
+8-Write a C# program to remove newline characters from a file
+
+9-Write a function AMCount() in C# which should read each character of a text file STORY.TXT, should count and display the occurence of alphabets ‘A’ and ‘M’ (including small cases ‘a’ and ‘m ‘too). Example: If the file content is as follows:
+
+-------------------------------------------------------------------------------
+Partial Class:
+Extension Method:
+Sealed Keyword:
+Delegates:
+Event:
+Multithreding:
+-----------------------------------------------------------------------------------
+Partial Class:-  A Partial class Allow to implement same class from two or more places, when it instantiated , it create single object. to create partial class , use partial keyword.
+
+Exa:
+	Partail Class Test
+	{
+		//some data
+	}
+	Partail Class Test
+	{
+		//some data another data
+	}
+----------------------------
+	Test obj=new Test();
+	
+
+
+----------------------------------------------------------------------------------
+2- Extension Method:- A Exntension method is the method , which implemented for any  class, from outside of the class, it provide addition feature for class or extend the functionality of class.
+---------------------------------------------------------------------------------
+//CARS car = new CARS();
+            //car.Engine();
+            //car.Speed();
+
+            List<string> Students = new List<string>() { "Amit","Dev","Manish","Subham","Adi","kamal","deepak" };
+
+            //List<string> fstudents=new List<string>();
+            //foreach(string name in Students)
+            //{
+            //    if (name.StartsWith("D"))
+            //    {
+            //        fstudents.Add(name);
+            //    }
+            //}
+
+            // Students.MyMethodExtension();
+
+            // List<string> fstudents = Students.Where(e => e.ToLower().StartsWith("d")).ToList();
+
+            Students.ConvertIntoUpperCase();
+
+            Console.WriteLine("-------------Students-------------");
+            foreach (string name in Students)
+            {
+                Console.WriteLine("name: "+name);
+            }
+-----------------------------------------------------------------------------
+3- Sealed Keyword:-  A sealed keyword is use to prevent inheritance of class. it means if we  do not want to inherit anyone our class, we can prevent it by using sealed keyword .
+--------------------------------------------------------------------------------
+4- Delegate:- Delegate is the typesafe function pointer, which refer address/reference of method. by using delegate we can invoke one or more method , by passing its reference.
+it works as a communicator between two parties, like - Event and Method.
+
+Note:- 
+1- A delegate is declare using delegate keyword.
+2- A delegate can use by creating instance of delegate.
+3- A delegate require atleast one method.
+4-A delegate parameters and  return type , must be same of method parameters and return type.
+--------------------------------------------------------------------------------
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using BusinessLayer;
+using System.IO;
+using System.Linq;
+namespace ConsoleApp3
+{
+    public delegate void Mydelegate(int x, int y);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Mydelegate obj = new Mydelegate(Addtion);
+            obj += Product;
+            obj += Divide;
+
+            obj.Invoke(55, 6);
+
+            Console.WriteLine("-----------------Second Invoke--------------------");
+
+            obj -= Divide;
+
+            obj.Invoke(20, 30);
+
+            Console.ReadKey();
+        }
+        public static void Addtion(int a, int b)
+        {
+            int r = a + b;
+            Console.WriteLine("Addition is : "+r);
+        }
+        public static void Product(int a, int b)
+        {
+            int r = a * b;
+            Console.WriteLine("Product is : "+r);
+        } 
+        public static void Divide(int a, int b)
+        {
+            int r = a / b;
+            Console.WriteLine("Division is : "+r);
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------
+ADO .Net:- (ActiveX Data Object):- ADO .Net is the library, which can be use to connect with different-2 database and communicate with them.
+it provide some core classes which can be use to connect database, execute query, take result etc.
+
+there is  2 main namespace  which provide important classes.
+1- using System.Data.SqlClient;
+		a- SqlConnection
+		b- SqlCommand
+		c- SqlDataReader
+		d- SqlDataAdapter
+2- using System.Data;
+		1- Dataset
+		2- datable
+-----------------------------------------------------------------------------------
+
+MVC (Model View Controller):-
+
+Passing data from controller to view:- to pass data from controller to view, we have 3 techniques
+	a- using view bag
+	b- using viewdata
+	c- using model
+-----------------------------------------------------------------------------------
+Working with EntityFramework.:-
+
+File Upload:-
+Form Validation:-
+
+------------------------------------------------------------------------------------
+Working With ADO .Net:-
+
+
+
+
+
+
+

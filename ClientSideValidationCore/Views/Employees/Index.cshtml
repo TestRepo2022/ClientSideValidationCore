@@ -1,0 +1,79 @@
+﻿@{ 
+
+}
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Create Employee</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group" id="formGroupFName">
+                            <label>First Name</label>
+                            <span class="err" id="errFName"></span>
+                            <input type="text" class="form-control" id="txtFName" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group" id="formGroupLName">
+                            <label>Last Name</label>
+                            <span class="err" id="errLName"></span>
+                            <input type="text" class="form-control" id="txtLName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group"  id="formGroupEmail">
+                            <label>Email Address</label>
+                            <span class="err" id="errEmail"></span>
+                            <input type="text" class="form-control" id="txtEmail" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group"  id="formGroupMobile">
+                            <label>Mobile Number</label>
+                            <span class="err" id="errMobile"></span>
+                            <input type="text" class="form-control" id="txtMobile" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group" id="formGroupGender">
+                            <label>Gender</label>
+                            <span class="err" id="errGender"></span>
+                            <select class="form-control" id="ddlGender">
+                                <option value="-1">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group"  id="formGroupSalary">
+                            <label>Last Salary</label>
+                            <span class="err" id="errSalary"></span>
+                            <input type="text" class="form-control" id="txtSalary" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 offset-8">
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btnSubmit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="~/js/Employee.js"></script>
